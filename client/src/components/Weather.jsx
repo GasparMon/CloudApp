@@ -8,6 +8,7 @@ import HourForecast from "./HourForecast";
 import { format, parseISO } from "date-fns";
 import { useNavigate } from "react-router-dom";
 
+
 export default function Weather() {
   const navigate = useNavigate();
   const cityData = useSelector((state) => state.cityData);
@@ -19,10 +20,6 @@ export default function Weather() {
   const [dayForecast, setDayForecast] = useState({});
   const [hourForecast, setHourForecast] = useState({});
   const [day, setDay] = useState("");
-
-  if(Object.keys(cityData.coord).length === 0){
-    navigate("/")
-  }
 
   useEffect(() => {
 
@@ -36,6 +33,8 @@ export default function Weather() {
             sunrise: response.sys.sunrise,
             sunset: response.sys.sunset,
           });
+        }else{
+          navigate("/")
         }
       } catch (error) {
         return error.message;
@@ -105,11 +104,14 @@ export default function Weather() {
     }
   }, [cityData, dayForecast]);
 
+
   return (
     <>
       {currentData &&
         Object.keys(currentData).length > 0 &&
-        Object.keys(hourForecast).length > 0 && (
+        Object.keys(hourForecast).length > 0 &&
+        Object.keys(timestamp).length > 0 &&
+        hourForecast.length > 0 && (
           <div className="weather_main_container">
             <div className="weather_main_title">
               <span class="material-symbols-outlined">near_me</span>
