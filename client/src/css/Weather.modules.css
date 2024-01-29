@@ -230,6 +230,12 @@
     justify-content: center;
 }
 
+.main_loading h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
 .container {
     width: 500px;
     height: 500px;
