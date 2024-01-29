@@ -6,8 +6,10 @@ import DayForecast from "./DayForecast";
 import AppForecast from "../handler/AppForecast";
 import HourForecast from "./HourForecast";
 import { format, parseISO } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 export default function Weather() {
+  const navigate = useNavigate();
   const cityData = useSelector((state) => state.cityData);
   const [currentData, setCurrentData] = useState({});
   const [timestamp, setTimestamp] = useState({
@@ -18,7 +20,12 @@ export default function Weather() {
   const [hourForecast, setHourForecast] = useState({});
   const [day, setDay] = useState("");
 
+  if(Object.keys(cityData.coord).length === 0){
+    navigate("/")
+  }
+
   useEffect(() => {
+
     const fetchData = async () => {
       try {
         const response = await AppGetWeather(cityData.coord);
@@ -47,6 +54,7 @@ export default function Weather() {
 
     fetchData();
     fetchForecast();
+
   }, [cityData.name]);
 
   useEffect(() => {
