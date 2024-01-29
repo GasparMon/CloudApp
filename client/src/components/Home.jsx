@@ -50,7 +50,7 @@ export default function Home() {
         <span class="material-symbols-outlined">globe</span>
         <h1>Global Highlights Forecast</h1>
       </div>
-      <div className="home_cards_city">
+      {/* <div className="home_cards_city">
         {cities_render.map((element) => (
          
             <Home_card
@@ -65,7 +65,46 @@ export default function Home() {
             coord={element.coord}
             />
         ) )}
+      </div> */}
+
+{cities_render.length === 0
+      ? 
+    (
+      <div className="main_loading">
+        <h1>We are downloading the weather forecast for you.</h1>
+      <div class="container">
+      <div class="cloud front">
+        <span class="left-front"></span>
+        <span class="right-front"></span>
       </div>
+      <span class="sun sunshine"></span>
+      <span class="sun"></span>
+      <div class="cloud back">
+        <span class="left-back"></span>
+        <span class="right-back"></span>
+      </div>
+    </div>
+    </div>
+    )
+  :(
+    <div className="home_cards_city">
+    {cities_render.map((element) => (
+     
+        <Home_card
+        key={element.id}
+        name={element.named}
+        icon={element.weather[0].icon}
+        main={element.weather[0].main}
+        temp={element.main.temp}
+        like={element.main.feels_like}
+        humidity={element.main.humidity}
+        speed={element.wind.speed}
+        coord={element.coord}
+        />
+    ) )}
+  </div>
+  )  
+  }
     </div>
   );
 }
