@@ -8,40 +8,40 @@ export default function Home() {
   const [cities_data, setCities_Data] = useState([]);
   const [cities_render, setCitiesRender] = useState([])
 
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     home_cities.forEach(async (element) => {
-  //       try {
-  //         const response = await AppGetWeather(element);
+  useEffect(() => {
+    const fetchData = () => {
+      home_cities.forEach(async (element) => {
+        try {
+          const response = await AppGetWeather(element);
 
-  //         if (response.name && !cities_data.some((element) => element.id === response.id)) {
-  //           setCities_Data((prevCitiesData) => [...prevCitiesData, response]);
-  //         }
-  //       } catch (error) {
-  //         return error.message;
-  //       }
-  //     });
-  //   };
+          if (response.name && !cities_data.some((element) => element.id === response.id)) {
+            setCities_Data((prevCitiesData) => [...prevCitiesData, response]);
+          }
+        } catch (error) {
+          return error.message;
+        }
+      });
+    };
 
-  //   fetchData();
-  // }, [home_cities]);
+    fetchData();
+  }, [home_cities]);
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   const uniqueCitiesData = cities_data.reduce((accumulator, current) => {
+    const uniqueCitiesData = cities_data.reduce((accumulator, current) => {
 
-  //     if (!accumulator[current.named]) {
+      if (!accumulator[current.named]) {
 
-  //       accumulator[current.named] = current;
-  //     }
-  //     return accumulator;
-  //   }, {});
+        accumulator[current.named] = current;
+      }
+      return accumulator;
+    }, {});
 
-  //   const resultArray = Object.values(uniqueCitiesData);
+    const resultArray = Object.values(uniqueCitiesData);
     
-  //   setCitiesRender(resultArray)
+    setCitiesRender(resultArray)
 
-  // },[cities_data])
+  },[cities_data])
 
 
   return (
