@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <div className="navbar_main_container" onClick={handleCloseResults}>
       <div className="nav_icon_container">
-        <img src="/img/icon_cloud_two.png" alt="main_icon" onClick={hanldeHome}></img>
+        <img src="/img/cloud_rain.png" alt="main_icon" onClick={hanldeHome}></img>
       </div>
       <div className="nav_title_container">
         <h2>CloudApp</h2>
