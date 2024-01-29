@@ -1,0 +1,37 @@
+.home_main_container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 91vh;
+    width: 100vw;
+    min-width: 1350px;
+    min-height: 700px;
+}
+
+.home_main_title{
+    background-color: #369edc;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home_main_title h1 {
+    color: white;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.home_main_title span {
+    color: white;
+    font-size: 50px;
+    margin-left: 150px;
+}
+
+.home_cards_city{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}

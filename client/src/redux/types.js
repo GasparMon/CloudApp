@@ -1,0 +1,2 @@
+export const USERWEATHER = "USERWEATHER"
+export const WEATHERDAY = "WEATHERDAY"

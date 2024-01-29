@@ -1,0 +1,95 @@
+.main_searchnav_container {
+  position: absolute;
+  border: 1px solid rgb(229, 229, 229);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  width: 500px;
+  left: 5px;
+  animation: fadeEffect 0.4s ease-in-out forwards;
+  z-index: 1;
+}
+
+@keyframes fadeEffect {
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+  to {
+    
+    top: 65px;
+    opacity: 1;
+  }
+}
+
+.searchnav_title {
+  height: 35px;
+  width: 100%;
+  background-color: rgb(239, 239, 239);
+  border-bottom: 1px solid rgba(208, 208, 208, 0.715);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchnav_title h5 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.searchnav_close{
+    width: 40px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.searchnav_close span{
+    font-size: 25px;
+    font-weight:500;
+    color: black;
+}
+
+.searchnav_close:hover{
+    background-color: rgb(93, 93, 93);
+    border-top: 1px solid rgb(164, 164, 164);
+}
+
+.searchnav_close:hover span{
+    color: white;
+}
+
+
+.search_cities {
+  min-height: 45px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 0.5px solid rgba(208, 208, 208, 0.398);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search_cities h4 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: black;
+  cursor: pointer;
+}
+
+.search_cities:hover {
+  background-color: #377cd6;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.search_cities:hover h4 {
+  color: rgb(255, 255, 255);
+}

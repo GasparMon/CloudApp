@@ -1,0 +1,39 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+  color-scheme: light dark;
+  color: #575757;
+  background-color: #ffffff;
+  min-width: 700px;
+  min-height: 100vh;
+  
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 700px;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 1400px){
+
+  .dayforecast_info h4,
+.dayforecast_date h4 {
+
+  color: black;
+
+}
+
+}
+
+@media screen and (max-height: 850px){
+
+  .dayforecast_info img {
+    height: 40px;
+    width: 40px;
+    filter: contrast(0.6);
+    
+  }
+}

@@ -1,0 +1,133 @@
+.main_container_home_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_container_home {
+  height: 80%;
+  width: 90%;
+  border: 1px solid rgb(229, 229, 229);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 254);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  animation: fadeEffect 1s ease-in-out forwards;
+  padding: 10px;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card_container_home:hover {
+  box-shadow: 0px 0 12px rgba(0, 0, 0, 0.663);
+}
+
+.card_container_home:hover h2 {
+  color: #ffc400;
+}
+
+.card_home_city {
+  height: 25%;
+  background: linear-gradient(43deg, #0429af 0%, #1d63a4 46%, #fff5cb 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.card_home_city h2 {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.card_home_info {
+  height: 75%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.card_home_data {
+  width: 60%;
+}
+
+.card_home_icon {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(213, 247, 254);
+}
+
+.card_home_icon img {
+  height: 180px;
+  width: 180px;
+  filter: contrast(0.6);
+}
+
+.card_home_icon h4 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+}
+.card_home_temp {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.card_home_temp h1 {
+  font-size: 80px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+.card_home_temp p {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+.card_home_h {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card_wind {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card_wind img {
+  width: 40px;
+  height: 40px;
+}
+
+.card_wind h5 {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 300;
+}

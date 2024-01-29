@@ -1,0 +1,56 @@
+.main_container_dayforecast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(209, 209, 209);
+  cursor: pointer;
+}
+
+.dayforecast_date {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_container_dayforecast:hover .dayforecast_date {
+    background-color: #f9c525;
+  }
+
+  .main_container_dayforecast:hover .dayforecast_date h4,
+  .main_container_dayforecast:hover .dayforecast_info h4
+   {
+    font-weight: 600;
+  }
+  
+
+
+
+.dayforecast_info {
+  background-color: rgb(216, 244, 249);
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+
+.dayforecast_info img {
+  height: 67px;
+  width: 70px;
+  filter: contrast(0.6);
+  
+}
+
+.dayforecast_info h4,
+.dayforecast_date h4 {
+  font-size: 18px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+}
